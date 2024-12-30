@@ -1,4 +1,4 @@
-import myButtonModule from './mybutton.js';
-import headerButtonModule from './headerbutton.js';
-myButtonModule();
-headerButtonModule();
+document.addEventListener("DOMContentLoaded",function(){const projectBtn=document.getElementById("projectBtn");if(projectBtn){projectBtn.addEventListener("mouseenter",function(){projectBtn.classList.remove("btn-outline-dark");projectBtn.classList.add("btn-success")});projectBtn.addEventListener("mouseleave",function(){projectBtn.classList.remove("btn-success");projectBtn.classList.add("btn-outline-dark")})}
+const mybutton=document.getElementById("myBtn");if(mybutton){window.onscroll=function(){scrollFunction(mybutton)};mybutton.addEventListener("click",topFunction);mybutton.addEventListener("mouseenter",function(){mybutton.classList.add("btn-success")});mybutton.addEventListener("mouseleave",function(){mybutton.classList.remove("btn-success")})}
+function scrollFunction(button){if(document.body.scrollTop>20||document.documentElement.scrollTop>20){button.style.display="block"}else{button.style.display="none"}}
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}})
