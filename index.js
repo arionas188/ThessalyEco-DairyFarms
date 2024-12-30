@@ -1,1 +1,4 @@
-import myButtonModule from"./mybutton.mjs";import headerButtonModule from"./headerbutton.mjs";myButtonModule();headerButtonModule()
+import myButtonModule from './mybutton.js';
+import headerButtonModule from './headerbutton.js';
+myButtonModule();
+headerButtonModule();
