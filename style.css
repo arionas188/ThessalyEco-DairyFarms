@@ -1,1 +1,149 @@
-body{height:auto;font-family:Roboto Static,Sofia Sans Extra Condensed,Sofia Sans Condensed}header{background-image:url('images/sheep1.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;height:100%;min-height:100vh}header .container img{height:100px}header ul{font-family:Roboto Static Sofia Sans Condensed;font-weight:700}header p{font-family:Roboto Static;font-weight:700}.shadow-black{box-shadow:0 15px 30px rgba(0,0,0,.5)}.text-shadow{text-shadow:1px 1px 4px white}.custom-toggler-icon{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='green' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")}.transparent-blur-bg{background-color:rgba(255,255,255,.2);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}.transparent1-blur-bg{background-color:rgba(255,255,255,.2);backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px)}.section1{background-color:#f2f1e5;height:50%;min-height:100vh}.section2{background-color:#2b2927;height:100%;min-height:100vh}.section3{background-color:#f2f1e5;height:100%;min-height:50vh}.section3 img{height:200px;width:auto}.section4{background-color:#2b2927;height:100%;min-height:50vh}.section5{background-color:#f2f1e5;height:auto;min-height:50vh}.logos-xorigwn{background-color:#fff}.europaiki-enwsi{max-width:100%;height:auto}.section6{background-color:#198753;height:auto;min-height:75vh}.section6 img{height:100px;width:100px}#scrollTopBtn{position:fixed;bottom:20px;left:20px;display:none;z-index:1000;border-radius:50%;padding:15px;font-size:18px;background-color:#007bff;color:#fff;border:none;cursor:pointer}#myBtn{display:none;position:fixed;bottom:20px;right:30px;z-index:99;border:none;outline:none;background-color:#198753,.7);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);color:#fff;cursor:pointer;padding:15px;border-radius:90px;font-size:18px}#myBtn:hover{background-color:#555}.section1-etairoi{background-color:#f2f1e5;height:100%;min-height:100vh}.section1-etairoi img{height:250px;width:250px}.section1-epikoinonia{background-color:#f2f1e5;height:100%;min-height:100vh}.section1-anakoinoseis{background-color:#f2f1e5;height:100%;min-height:100vh}
+body {
+    height: auto;
+    font-family: Roboto Static , Sofia Sans Extra Condensed , Sofia Sans Condensed;
+    
+    
+}
+header {
+    background-image: url('images/sheep1.jpg');
+    background-position: center;  
+    background-size: cover;                     /* Εξασφαλίζει ότι το background καλύπτει πλήρως το header */
+    background-repeat: no-repeat;               /* Αποτρέπει την επανάληψη της εικόνας */
+    height: 100%;                              
+    min-height: 100vh;                        
+}
+header .container img {
+    height: 100px;
+}
+header ul {
+    font-family:  Roboto Static Sofia Sans Condensed ;
+    font-weight: 700 ;
+}
+header p {
+    font-family: Roboto Static ;
+    font-weight: 700 ;
+}
+.shadow-black {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Μεγάλο blur και spread */
+}
+.text-shadow {
+    text-shadow: 1px 1px 4px white;
+}
+.custom-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='green' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.transparent-blur-bg {
+    background-color: rgba(255, 255, 255, 0.2); /* Λευκό διαφάνεια */
+    backdrop-filter: blur(4px); /* Ρύθμιση θολούρας */
+    -webkit-backdrop-filter: blur(4px); /* Υποστήριξη για Safari */
+}
+.transparent1-blur-bg {
+    background-color: rgba(255, 255, 255, 0.2); /* Λευκό διαφάνεια */
+    backdrop-filter: blur(1px); /* Ρύθμιση θολούρας */
+    -webkit-backdrop-filter: blur(1px); /* Υποστήριξη για Safari */
+}
+
+.section1 {
+    background-color: rgb(242,241,229);
+    height: 50%;                              
+    min-height: 100vh;                        
+}
+.section2 {
+    background-color:rgb(43,41,39);
+    height: 100%;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
+    min-height: 100vh;  /* Όρισε το ελάχιστο ύψος του header αν χρειάζεται */
+}
+.section3 {
+    background-color: rgb(242,241,229);
+    height: 100%;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
+    min-height: 50vh;  /* Όρισε το ελάχιστο ύψος του header αν χρειάζεται */
+}
+.section3 img {
+    height: 200px;
+    width: auto;
+}
+.section4 {
+    background-color:rgb(43,41,39);
+    height: 100%;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
+    min-height: 50vh;  /* Όρισε το ελάχιστο ύψος του header αν χρειάζεται */
+}
+.section5 {
+    background-color:  rgb(242,241,229);
+    height: auto;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
+    min-height: 50vh;  /* Όρισε το ελάχιστο ύψος του header αν χρειάζεται */
+}
+.logos-xorigwn {
+    background-color:white;
+}
+.europaiki-enwsi {
+    max-width: 100%;
+    height: auto;
+}
+.section6 {
+    background-color: rgb(25,135,83);
+    height:auto; 
+    min-height: 75vh;
+}
+.section6 img {
+    height: 100px;
+    width: 100px;
+}
+/* custom - CSS για το κουμπί */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px; /* Απόσταση από το κάτω μέρος */
+    left: 20px;   /* Απόσταση από την αριστερή πλευρά */
+    display: none; /* Αρχικά κρυφό */
+    z-index: 1000;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(25,135,83, 0.7); /* Set a background color */
+    backdrop-filter: blur(5px); /* Ρύθμιση θολούρας */
+    -webkit-backdrop-filter: blur(5px); /* Υποστήριξη για Safari */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 90px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* ΑΠΟ ΕΔΩ ΚΑΙ ΚΑΤΩ ΕΙΝΑΙ ΤΟ STYLE ΓΙΑ ΤΟ etairoi.html */
+
+.section1-etairoi {
+    background-color: rgb(242,241,229);
+    height: 100%;                              
+    min-height: 100vh;                        
+}
+.section1-etairoi img {
+    height: 250px;
+    width: 250px;
+}
+/* ΑΠΟ ΕΔΩ ΚΑΙ ΚΑΤΩ ΕΙΝΑΙ ΤΟ STYLE ΓΙΑ ΤΟ epikoinonia.html */
+.section1-epikoinonia {
+    background-color: rgb(242,241,229);
+    height: 100%;                              
+    min-height: 100vh;                        
+}
+/* ΑΠΟ ΕΔΩ ΚΑΙ ΚΑΤΩ ΕΙΝΑΙ ΤΟ STYLE ΓΙΑ ΤΟ anakoinoseis.html */
+.section1-anakoinoseis {
+    background-color: rgb(242,241,229);
+    height: 100%;                              
+    min-height: 100vh;                        
+}
