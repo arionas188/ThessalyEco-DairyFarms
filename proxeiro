@@ -1,0 +1,72 @@
+    <script>
+        let currentFontSize = 100; // Αρχικό ποσοστό γραμματοσειράς
+    
+        // Λειτουργία αύξησης κειμένου
+        document.getElementById('increase-text').addEventListener('click', function() {
+          currentFontSize += 10;
+          document.documentElement.style.fontSize = currentFontSize + '%';
+        });
+    
+        // Λειτουργία μείωσης κειμένου
+        document.getElementById('decrease-text').addEventListener('click', function() {
+          currentFontSize = Math.max(50, currentFontSize - 10); // Μην πέφτει κάτω από 50%
+          document.documentElement.style.fontSize = currentFontSize + '%';
+        });
+    
+        // Εναλλαγή grayscale
+        document.getElementById('grayscale').addEventListener('click', function() {
+          document.body.classList.toggle('grayscale');
+        });
+    
+        // Εναλλαγή high contrast
+        document.getElementById('high-contrast').addEventListener('click', function() {
+          document.body.classList.toggle('high-contrast');
+        });
+    
+        // Εναλλαγή negative contrast
+        document.getElementById('negative-contrast').addEventListener('click', function() {
+          document.body.classList.toggle('negative-contrast');
+        });
+    
+        // Εναλλαγή light background
+        document.getElementById('light-background').addEventListener('click', function() {
+          document.body.classList.toggle('light-background');
+        });
+    
+        // Εναλλαγή underline για links
+        document.getElementById('links-underline').addEventListener('click', function() {
+          document.body.classList.toggle('links-underline');
+        });
+    
+        // Εναλλαγή readable font
+        document.getElementById('readable-font').addEventListener('click', function() {
+          document.body.classList.toggle('readable-font');
+        });
+    
+        // Reset όλων των αλλαγών
+        document.getElementById('reset').addEventListener('click', function() {
+          currentFontSize = 100;
+          document.documentElement.style.fontSize = '100%';
+          document.body.classList.remove('grayscale', 'high-contrast', 'negative-contrast', 'light-background', 'links-underline', 'readable-font');
+        });
+    </script>
+   .grayscale {
+    filter: grayscale(100%) !important;
+  }
+  .high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  .negative-contrast {
+    filter: invert(100%) !important;
+  }
+  .light-background {
+    background-color: #f5f5f5 !important;
+    color: #000 !important;
+  }
+  .links-underline a {
+    text-decoration: underline !important;
+  }
+  .readable-font {
+    font-family: Arial, sans-serif !important;
+  }
