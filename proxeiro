@@ -1,72 +1,67 @@
-    <script>
-        let currentFontSize = 100; // Αρχικό ποσοστό γραμματοσειράς
-    
-        // Λειτουργία αύξησης κειμένου
-        document.getElementById('increase-text').addEventListener('click', function() {
-          currentFontSize += 10;
-          document.documentElement.style.fontSize = currentFontSize + '%';
-        });
-    
-        // Λειτουργία μείωσης κειμένου
-        document.getElementById('decrease-text').addEventListener('click', function() {
-          currentFontSize = Math.max(50, currentFontSize - 10); // Μην πέφτει κάτω από 50%
-          document.documentElement.style.fontSize = currentFontSize + '%';
-        });
-    
-        // Εναλλαγή grayscale
-        document.getElementById('grayscale').addEventListener('click', function() {
-          document.body.classList.toggle('grayscale');
-        });
-    
-        // Εναλλαγή high contrast
-        document.getElementById('high-contrast').addEventListener('click', function() {
-          document.body.classList.toggle('high-contrast');
-        });
-    
-        // Εναλλαγή negative contrast
-        document.getElementById('negative-contrast').addEventListener('click', function() {
-          document.body.classList.toggle('negative-contrast');
-        });
-    
-        // Εναλλαγή light background
-        document.getElementById('light-background').addEventListener('click', function() {
-          document.body.classList.toggle('light-background');
-        });
-    
-        // Εναλλαγή underline για links
-        document.getElementById('links-underline').addEventListener('click', function() {
-          document.body.classList.toggle('links-underline');
-        });
-    
-        // Εναλλαγή readable font
-        document.getElementById('readable-font').addEventListener('click', function() {
-          document.body.classList.toggle('readable-font');
-        });
-    
-        // Reset όλων των αλλαγών
-        document.getElementById('reset').addEventListener('click', function() {
-          currentFontSize = 100;
-          document.documentElement.style.fontSize = '100%';
-          document.body.classList.remove('grayscale', 'high-contrast', 'negative-contrast', 'light-background', 'links-underline', 'readable-font');
-        });
-    </script>
-   .grayscale {
-    filter: grayscale(100%) !important;
-  }
-  .high-contrast {
-    background-color: #000 !important;
-    color: #fff !important;
-  }
-  .negative-contrast {
-    filter: invert(100%) !important;
-  }
-  .light-background {
-    background-color: #f5f5f5 !important;
-    color: #000 !important;
-  }
-  .links-underline a {
-    text-decoration: underline !important;
-  }
-  .readable-font {
-    font-family: Arial, sans-serif !important;
-  }
+                            <!-- 🪟 Modal για τις εικόνες -->
+                            <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl">
+                                    <div class="modal-content bg-dark border-0">
+                                        <div class="modal-body p-0">
+                                            <div id="announcement2" class="carousel slide" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/Mouzaki1.jpg" class="d-block w-100" alt="Slide 1">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/Mouzaki2.jpg" class="d-block w-100" alt="Slide 2">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/Mouzaki3.jpg" class="d-block w-100" alt="Slide 3">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/Mouzaki4.jpg" class="d-block w-100" alt="Slide 4">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/Mouzaki5.jpg" class="d-block w-100" alt="Slide 5">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/Mouzaki6.jpg" class="d-block w-100" alt="Slide 6">
+                                                    </div>
+                                                </div>
+                                                <!-- Prev / Next Buttons -->
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#announcement2" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#announcement2" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <script>
+                                const modals = [
+                                  { triggerSelector: '.carousel-image-1', modalId: '#imageModal1', carouselId: '#announcement-modal-carousel-1' },
+                                  { triggerSelector: '.carousel-image-2', modalId: '#imageModal2', carouselId: '#announcement-modal-carousel-2' },
+                                  { triggerSelector: '.carousel-image-3', modalId: '#imageModal3', carouselId: '#announcement-modal-carousel-3' },
+                                ];
+                              
+                                modals.forEach(({ triggerSelector, modalId, carouselId }) => {
+                                  let clickedIndex = 0;
+                              
+                                  // Καταγράφουμε ποια εικόνα κλικαρίστηκε
+                                  document.querySelectorAll(triggerSelector).forEach((img) => {
+                                    img.addEventListener('click', function () {
+                                      clickedIndex = parseInt(this.getAttribute('data-img-index'));
+                                    });
+                                  });
+                              
+                                  // Όταν ανοίγει το modal, πατάμε την αντίστοιχη slide
+                                  const modalEl = document.querySelector(modalId);
+                                  modalEl.addEventListener('shown.bs.modal', function () {
+                                    const carousel = bootstrap.Carousel.getOrCreateInstance(document.querySelector(carouselId));
+                                    carousel.to(clickedIndex);
+                                  });
+                                });
+                              </script>
