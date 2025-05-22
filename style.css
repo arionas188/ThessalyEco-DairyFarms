@@ -51,6 +51,11 @@ header p {
     height: 100%;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
     min-height: 100vh;  /* Όρισε το ελάχιστο ύψος του header αν χρειάζεται */
 }
+.section2-anakoinoseis { /* .section2-anakoinoseis = .section5*/
+    background-color:  rgb(242,241,229);
+    height: auto;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
+    min-height: 50vh;  /* Όρισε το ελάχιστο ύψος του header αν χρειάζεται */
+}
 .section3 {
     background-color: rgb(242,241,229);
     height: 100%;  /* Εξασφαλίζει ότι το ύψος του header προσαρμόζεται αυτόματα στο περιεχόμενο */
@@ -78,6 +83,11 @@ header p {
     height: auto;
 }
 .section6 {
+    background-color: rgb(25,135,83);
+    height:auto; 
+    min-height: 75vh;
+}
+.section3-anakoinoseis{ /* .section3-anakoinoseis = .section6*/
     background-color: rgb(25,135,83);
     height:auto; 
     min-height: 75vh;
