@@ -92,6 +92,10 @@ header p {
     height:auto; 
     min-height: 75vh;
 }
+.section3-anakoinoseis img {
+    height: 100px;
+    width: 100px;
+}
 .section6 img {
     height: 100px;
     width: 100px;
